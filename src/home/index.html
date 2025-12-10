@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistente Virtual UMNG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- HEADER GOV.CO -->
+    <div class="gov-bar">
+      <img src="logos/gov.svg" alt="gov.co" class="gov-logo" />
+      <img src="buttons/btn-idioma.svg" alt="btn-idioma" class="lang-toggle" />
+    </div>
+
+    <!-- VIEWPORT PRINCIPAL -->
+    <div class="viewport-container">
+      <!-- Fondos -->
+      <div class="fondo"></div>
+      <div class="fondo-personas"></div>
+
+      <!-- Logo posicionado absolutamente arriba a la izquierda -->
+      <img src="logos/escudo.svg" alt="Escudo UMNG" class="logo-escudo" />
+
+      <!-- LAYOUT HORIZONTAL: Pato + Chat -->
+      <div class="content-layout">
+        <!-- COLUMNA IZQUIERDA: Pato + Botón (sin logo) -->
+        <div class="pato-column">
+          <img src="images/pato.svg" class="pato-img" alt="Pato UMNG" />
+
+          <!-- Botón Habla conmigo debajo del pato -->
+          <button class="mic-btn-pato">
+            Habla conmigo
+            <img src="icons/microphone.svg" alt="micrófono" class="mic-icon" />
+          </button>
+        </div>
+
+        <!-- COLUMNA DERECHA: Header + Chat Card -->
+        <div class="chat-column">
+          <!-- ENCABEZADO: Título + Subtítulo -->
+          <header class="main-header">
+            <h1 class="main-title">Habla con Patroclo, tu asistente virtual</h1>
+            <p class="main-subtitle">
+              Envía un mensaje de voz o texto y él te ayudará a resolver las
+              dudas que tengas con los procesos con la UMNG.
+            </p>
+          </header>
+
+          <div class="chat-card">
+            <!-- Header del chat -->
+            <div class="chat-header">
+              <div class="chat-header-icon">
+                <img
+                  c
+                  src="icons/user-message.svg"
+                  class="chat-icon"
+                  alt="icon"
+                />
+              </div>
+              <div class="chat-header-text">
+                <h2>¡Hola colaborador!</h2>
+                <p>¿En qué puedo ayudarte hoy?</p>
+              </div>
+            </div>
+
+            <div class="sugerencias">
+              <p><strong>Puedes preguntarme sobre:</strong></p>
+              <div class="tags">
+                <button class="tag" onclick="sendQuick('Programas académicos')">
+                  <img
+                    src="icons/academic-programs.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Programas académicos
+                </button>
+                <button class="tag" onclick="sendQuick('Posgrados')">
+                  <img
+                    src="icons/postgraduate.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Posgrados
+                </button>
+                <button class="tag" onclick="sendQuick('Pregrados')">
+                  <img
+                    src="icons/pregraduate.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Pregrados
+                </button>
+                <button class="tag" onclick="sendQuick('Becas')">
+                  <img
+                    src="icons/scholarships.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Becas
+                </button>
+                <button class="tag" onclick="sendQuick('Trámites')">
+                  <img
+                    src="icons/formalities.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Trámites
+                </button>
+                <button class="tag" onclick="sendQuick('Aula virtual')">
+                  <img
+                    src="icons/virtual-classroom.svg"
+                    alt=""
+                    class="tag-icon-svg"
+                  />
+                  Aula virtual
+                </button>
+              </div>
+            </div>
+
+            <div id="messages"></div>
+            <div id="typing">Patroclo está escribiendo…</div>
+          </div>
+          <div class="chat-input-area">
+            <input
+              id="msg"
+              type="text"
+              placeholder="Ingresa tu consulta aquí…"
+            />
+            <button class="send-btn" onclick="send()">
+              <img src="buttons/boton_enviar_chat.svg" alt="Enviar" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
