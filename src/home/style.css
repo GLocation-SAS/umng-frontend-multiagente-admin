@@ -544,7 +544,7 @@ body {
   .chat-header-icon {
     width: 34px;
     height: 34px;
-    transform: translateX(calc(-190px - 10px));
+    transform: translateX(calc(-210px - 10px));
   }
 
   .sugerencias > p {
@@ -659,7 +659,7 @@ body {
   .chat-header-icon {
     width: 60px;
     height: 60px;
-    transform: translateX(calc(-300px - 2px));
+    transform: translateX(calc(-220px - 2px));
   }
 
   .sugerencias {
@@ -917,7 +917,7 @@ body {
   .chat-header-icon {
     width: 30px;
     height: 30px;
-    transform: translateX(calc(-140px - 15px));
+    transform: translateX(calc(-147px - 15px));
   }
 
   .sugerencias {
