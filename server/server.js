@@ -10,30 +10,24 @@ const __dirname = path.dirname(__filename);
 const app = express();
 app.use(express.json());
 
-// --------------------------------------------
-// FRONTEND
-// --------------------------------------------
 const publicPath = path.join(__dirname, '../public');
 app.use(express.static(publicPath));
 
 const homePath = path.join(__dirname, '../src/home');
 app.use(express.static(homePath));
 
+const quickQuestionsPath = path.join(__dirname, '../src/quick-questions');
+app.use('/quick-questions', express.static(quickQuestionsPath));
+
 app.use((req, res, next) => {
   if (req.path.startsWith('/api')) return next();
   res.sendFile(path.join(homePath, 'index.html'));
 });
 
-// --------------------------------------------
-// CONFIG AGENTE
-// --------------------------------------------
-const PROJECT_ID = 'umng-estudiantes-agentes-dev';
+const PROJECT_ID = 'umng-admin-agentes-dev';
 const LOCATION = 'global';
-const AGENT_ID = '9d6cdfd4-cc92-4bef-a00a-f660e9f72ff1';
+const AGENT_ID = '93699bca-c7fb-40ca-bf30-ca394d60c3bc';
 
-// --------------------------------------------
-// GOOGLE AUTH (Cloud Run / App Engine)
-// --------------------------------------------
 async function getAccessToken() {
   const keyFilePath = path.join(
     __dirname,
@@ -50,9 +44,6 @@ async function getAccessToken() {
   return token.token;
 }
 
-// --------------------------------------------
-// ENDPOINT /api/chat
-// --------------------------------------------
 app.post('/api/chat', async (req, res) => {
   try {
     const text = req.body.text;
@@ -92,9 +83,6 @@ app.post('/api/chat', async (req, res) => {
   }
 });
 
-// --------------------------------------------
-// SERVIDOR (Cloud Run usa PORT=8080)
-// --------------------------------------------
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
   console.log('Servidor iniciado en PUERTO ' + PORT);
