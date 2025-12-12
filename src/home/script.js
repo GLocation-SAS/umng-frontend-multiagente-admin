@@ -81,16 +81,8 @@ function addMessage(text, sender) {
   icon.alt = sender;
 
   const textSpan = document.createElement('span');
-  textSpan.innerHTML = text
-    .split('\n')
-    .map((line) => {
-      const urlRegex = /(https?:\/\/[^\s]+)/g;
-      return line.replace(
-        urlRegex,
-        '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>'
-      );
-    })
-    .join('<br>');
+
+  textSpan.innerHTML = marked.parse(text);
 
   bubble.appendChild(icon);
   bubble.appendChild(textSpan);
