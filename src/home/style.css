@@ -35,8 +35,8 @@ body {
   position: relative;
 }
 
-.fondo,
-.fondo-personas {
+.background,
+.background-campus {
   position: absolute;
   inset: 0;
   background-size: cover;
@@ -44,13 +44,15 @@ body {
   z-index: -1;
 }
 
-.fondo {
+.background {
   background-image: url('background/degraded.svg');
 }
 
-.fondo-personas {
-  background-image: url('background/people.svg');
-  opacity: 0.55;
+.background-campus {
+  background-image: url('background/campus.svg');
+  background-size: cover;
+  background-position: center 0%;
+  background-repeat: no-repeat;
   z-index: -2;
 }
 
@@ -61,23 +63,22 @@ body {
   text-align: center;
   padding: 40px 0 20px 0;
   color: white;
-  gap: 12px;
   flex-shrink: 0;
 }
 
 .logo-escudo {
   position: fixed;
   top: 72px;
-  left: 38px;
+  left: 77px;
   width: 237px;
-  height: 76px;
+  height: 70px;
   z-index: 10;
   filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
   object-fit: contain;
 }
 
 .main-title {
-  font-size: 40px;
+  font-size: 44.5px;
   font-weight: 700;
   margin: 0;
   color: #fffae8;
@@ -86,7 +87,7 @@ body {
 }
 
 .main-subtitle {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 400;
   margin: 0;
   color: #f4f4f4;
@@ -110,14 +111,16 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  gap: 20px;
-  flex-shrink: 0;
-  padding-left: 20px;
+  gap: 15px;
+  flex-shrink: 1;
+  min-width: 0;
+  margin-left: -10px;
+  max-width: 350px;
 }
 
 .pato-img {
-  width: 231.76px;
-  height: 425px;
+  width: 240px;
+  height: 440px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
 }
@@ -126,7 +129,7 @@ body {
   background: #f54900;
   color: white;
   border: none;
-  width: 309px;
+  width: 400px;
   height: 51px;
   border-radius: 6px;
   font-size: 18px;
@@ -140,9 +143,8 @@ body {
 }
 
 .mic-btn-pato:hover {
-  background: #dd4301;
+  background: #0b875b;
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(11, 88, 61, 0.3);
 }
 
 .chat-column {
@@ -155,14 +157,14 @@ body {
 }
 
 .chat-card {
-  background: white;
-  border-radius: 24px;
+  background: #ffffff;
+  border-radius: 14px;
   padding: 28px;
   display: flex;
   flex-direction: column;
   height: 432px;
-  max-width: 1040px;
   width: 100%;
+  max-width: none;
   overflow: hidden;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
   flex-shrink: 0;
@@ -171,19 +173,23 @@ body {
 
 .chat-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 12px;
   flex-shrink: 0;
   margin-bottom: 90px;
+  position: relative;
 }
 
 .chat-header-icon {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(calc(-235px - 12px));
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 35px;
+  height: 35px;
   flex-shrink: 0;
 }
 
@@ -195,10 +201,10 @@ body {
 .chat-header-text {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  text-align: left;
+  gap: 15px;
+  text-align: center;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .chat-header h2 {
@@ -210,7 +216,7 @@ body {
   font-size: 40px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-align: left;
+  text-align: center;
   color: #000000;
 }
 
@@ -223,15 +229,18 @@ body {
   font-size: 20px;
   line-height: 100%;
   letter-spacing: 0%;
-  text-align: left;
+  text-align: center;
   color: #666666;
-  padding-left: 20px;
+}
+
+.sugerencias {
+  margin-top: -17px;
 }
 
 .sugerencias > p {
   width: 840px;
   height: 30px;
-  margin: 0 auto 12px;
+  margin: 0 auto 30px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -259,7 +268,7 @@ body {
 }
 
 .tag {
-  border: 2px solid #fc6700;
+  border: 2px solid #f54900;
   border-radius: 50px;
   padding: 10px 20px;
   cursor: pointer;
@@ -278,7 +287,7 @@ body {
 }
 
 .tag:hover {
-  background: #fc6700;
+  background: #e24501;
   color: white;
   transform: translateY(-1px);
   box-shadow: 0 3px 10px rgba(11, 135, 91, 0.25);
@@ -354,6 +363,7 @@ body {
 .msg.bot .msg-icon {
   left: -68px;
   bottom: 0;
+  z-index: 1;
 }
 
 .msg.bot::before {
@@ -364,6 +374,7 @@ body {
   width: 30px;
   height: 50%;
   background: #e5ecf8;
+  z-index: 0;
 }
 
 .msg.bot::after {
@@ -375,6 +386,7 @@ body {
   height: 50%;
   background: white;
   border-bottom-right-radius: 100%;
+  z-index: 0;
 }
 
 .msg a {
@@ -384,7 +396,7 @@ body {
 }
 
 .msg a:hover {
-  color: #158361;
+  color: #f54900;
 }
 
 #typing {
@@ -402,11 +414,12 @@ body {
   background: #fbfbfb;
   border: 1px solid #7e7e7e;
   border-radius: 50px;
-  padding: 4px 8px 4px 20px;
+  height: 62px;
+  padding: 0 8px 0 20px;
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   margin-top: 12px;
-  max-width: 1040px;
+  max-width: 1300px;
   width: 100%;
   box-sizing: border-box;
 }
@@ -420,7 +433,8 @@ body {
   font-weight: 400;
   line-height: 100%;
   letter-spacing: 0%;
-  padding: 15px 12px;
+  padding: 0px 12px;
+  height: 100%;
   background: transparent;
   color: #000000;
 }
@@ -472,10 +486,109 @@ body {
   box-shadow: 0 2px 6px #b9b9b9;
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 901px) and (max-width: 1440px) {
+  .logo-escudo {
+    width: 200px;
+    height: 74px;
+    top: 65px;
+    left: 50px;
+  }
+
+  .main-title {
+    font-size: 36px;
+  }
+
+  .main-subtitle {
+    font-size: 14px;
+  }
+
   .content-layout {
-    gap: 100px;
-    padding: 40px 120px 50px;
+    gap: 40px;
+    padding: 15px 40px 25px;
+  }
+
+  .pato-column {
+    max-width: 300px;
+  }
+
+  .pato-img {
+    width: 300px;
+    height: 510px;
+  }
+
+  .mic-btn-pato {
+    width: 320px;
+    height: 62px;
+    font-size: 17px;
+  }
+
+  .chat-card {
+    height: 490px;
+    width: 100%;
+    max-width: none;
+    padding: 26px;
+  }
+
+  .chat-header {
+    margin-bottom: 70px;
+  }
+
+  .chat-header h2 {
+    font-size: 34px;
+  }
+
+  .chat-header p {
+    font-size: 17px;
+  }
+
+  .chat-header-icon {
+    width: 34px;
+    height: 34px;
+    transform: translateX(calc(-190px - 10px));
+  }
+
+  .sugerencias > p {
+    width: 100%;
+    max-width: 700px;
+    font-size: 17px;
+  }
+
+  .tag {
+    font-size: 11px;
+    padding: 9px 18px;
+  }
+
+  .msg {
+    font-size: 14px;
+    padding: 18px 14px;
+  }
+
+  .msg-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .msg.user {
+    margin-right: 68px;
+  }
+
+  .msg.bot {
+    margin-left: 68px;
+  }
+
+  .msg.user .msg-icon {
+    right: -58px;
+  }
+
+  .msg.bot .msg-icon {
+    left: -58px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .content-layout {
+    gap: 90px;
+    padding: 40px 110px 50px;
   }
 
   .main-header {
@@ -492,143 +605,154 @@ body {
   }
 
   .logo-escudo {
-    width: 310px;
-    height: 100px;
-    top: 85px;
-    left: 55px;
+    width: 300px;
+    height: 90px;
+    top: 82px;
+    left: 60px;
+  }
+
+  .pato-column {
+    max-width: 450px;
   }
 
   .pato-img {
-    width: 310px;
-    height: 568px;
+    width: 450px;
+    height: 580px;
   }
 
   .mic-btn-pato {
-    width: 413px;
-    height: 68px;
-    font-size: 24px;
-    gap: 16px;
+    width: 450px;
+    height: 62px;
+    font-size: 22px;
+    gap: 15px;
   }
 
   .chat-column {
-    max-width: 1390px;
+    max-width: 1300px;
   }
 
   .chat-card {
-    max-width: 1390px;
-    height: 578px;
-    padding: 37px;
-    border-radius: 32px;
+    height: 570px;
+    width: 1260px;
+    padding: 34px;
+    border-radius: 18px;
   }
 
   .chat-header {
-    margin-bottom: 120px;
+    margin-bottom: 110px;
     gap: 16px;
   }
 
   .chat-header h2 {
-    font-size: 53px;
+    font-size: 50px;
   }
 
   .chat-header p {
-    font-size: 27px;
-    padding-left: 27px;
+    font-size: 25px;
   }
 
   .chat-icon {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
   }
 
   .chat-header-icon {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
+    transform: translateX(calc(-300px - 2px));
+  }
+
+  .sugerencias {
+    margin-top: -20px;
   }
 
   .sugerencias > p {
-    font-size: 27px;
-    width: 1120px;
-    height: 40px;
+    font-size: 25px;
+    width: 1050px;
+    height: 38px;
+    margin-bottom: 32px;
   }
 
   .tags {
-    max-width: 800px;
-    gap: 11px 16px;
-    row-gap: 21px;
+    max-width: 750px;
+    gap: 10px 15px;
+    row-gap: 20px;
   }
 
   .tag {
-    font-size: 16px;
-    padding: 13px 27px;
-    border-radius: 67px;
+    font-size: 15px;
+    padding: 12px 24px;
+    border-radius: 60px;
+    font-weight: 600;
   }
 
   .tag-icon-svg {
-    width: 27px;
-    height: 27px;
+    width: 25px;
+    height: 25px;
   }
 
   #messages {
-    max-height: 267px;
+    max-height: 250px;
   }
 
   .msg {
-    font-size: 19px;
-    padding: 27px 20px;
-    margin: 27px 0;
-    border-radius: 19px;
+    font-size: 17px;
+    padding: 24px 18px;
+    margin: 24px 0;
+    border-radius: 18px;
   }
 
   .msg-icon {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
   }
 
   .msg.user {
-    margin-right: 107px;
+    margin-right: 100px;
   }
 
   .msg.bot {
-    margin-left: 107px;
+    margin-left: 100px;
   }
 
   .msg.user .msg-icon {
-    right: -91px;
+    right: -85px;
   }
 
   .msg.bot .msg-icon {
-    left: -91px;
+    left: -85px;
   }
 
   .msg.bot::before {
-    left: -27px;
-    width: 40px;
+    left: -25px;
+    width: 38px;
   }
 
   .msg.bot::after {
-    left: -27px;
-    width: 27px;
+    left: -25px;
+    width: 25px;
   }
 
   .chat-input-area {
-    max-width: 1390px;
-    padding: 5px 11px 5px 27px;
-    border-radius: 67px;
-    margin-top: 16px;
+    max-width: 1300px;
+    height: 62px;
+    padding: 5px 11px 5px 25px;
+    border-radius: 60px;
+    margin-top: 15px;
   }
 
   .chat-input-area input {
-    font-size: 19px;
-    padding: 20px 16px;
+    font-size: 17px;
+    padding: 18px 15px;
   }
 
   .chat-input-area input::placeholder {
-    font-size: 19px;
+    font-size: 17px;
   }
 
   .send-btn img {
-    width: 53px;
-    height: 53px;
+    width: 50px;
+    height: 50px;
   }
 
   #messages::-webkit-scrollbar {
@@ -636,7 +760,7 @@ body {
   }
 
   #typing {
-    font-size: 17px;
+    font-size: 16px;
     padding: 8px 13px;
   }
 }
@@ -717,8 +841,8 @@ body {
     height: auto;
   }
 
-  .fondo,
-  .fondo-personas {
+  .background,
+  .background-campus {
     position: fixed;
   }
 
@@ -726,18 +850,20 @@ body {
     position: absolute;
     top: 15px;
     left: 15px;
-    width: 120px;
-    height: 38px;
+    width: 130px;
+    height: 47px;
   }
 
   .main-header {
     padding: 15px 15px 15px;
-    margin-top: 60px;
+    margin-top: 50px;
+    gap: 12px;
   }
 
   .main-title {
-    font-size: 24px;
+    font-size: 30px;
     padding: 0 15px;
+    line-height: 1.1;
   }
 
   .main-subtitle {
@@ -765,7 +891,8 @@ body {
 
   .chat-card {
     padding: 20px;
-    height: auto;
+    height: 500px;
+    max-height: 10vh;
     min-height: 400px;
     max-width: 100%;
   }
@@ -775,29 +902,33 @@ body {
   }
 
   .chat-header h2 {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .chat-header p {
     font-size: 16px;
-    padding-left: 15px;
   }
 
   .chat-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 
   .chat-header-icon {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    transform: translateX(calc(-140px - 15px));
+  }
+
+  .sugerencias {
+    margin-top: 20px;
   }
 
   .sugerencias > p {
     width: 100%;
-    font-size: 16px;
+    font-size: 14px;
     height: auto;
-    padding: 0 10px;
+    padding: 0;
   }
 
   .tags {
@@ -815,7 +946,11 @@ body {
   }
 
   #messages {
-    max-height: 150px;
+    max-height: 200px;
+  }
+
+  #messages.full-height {
+    max-height: 500px;
   }
 
   .msg {
@@ -844,16 +979,17 @@ body {
 
   .msg.bot .msg-icon {
     left: -46px;
+    z-index: 1;
   }
 
   .msg.bot::before {
-    left: -15px;
+    left: -8px;
     width: 20px;
   }
 
   .msg.bot::after {
-    left: -15px;
-    width: 15px;
+    left: -8px;
+    width: 8px;
   }
 
   .chat-input-area {

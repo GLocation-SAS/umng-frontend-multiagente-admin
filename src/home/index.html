@@ -14,37 +14,28 @@
   </head>
 
   <body>
-    <!-- HEADER GOV.CO -->
     <div class="gov-bar">
       <img src="logos/gov.svg" alt="gov.co" class="gov-logo" />
       <img src="buttons/btn-idioma.svg" alt="btn-idioma" class="lang-toggle" />
     </div>
 
-    <!-- VIEWPORT PRINCIPAL -->
     <div class="viewport-container">
-      <!-- Fondos -->
-      <div class="fondo"></div>
-      <div class="fondo-personas"></div>
+      <div class="background"></div>
+      <div class="background-campus"></div>
 
-      <!-- Logo posicionado absolutamente arriba a la izquierda -->
       <img src="logos/escudo.svg" alt="Escudo UMNG" class="logo-escudo" />
 
-      <!-- LAYOUT HORIZONTAL: Pato + Chat -->
       <div class="content-layout">
-        <!-- COLUMNA IZQUIERDA: Pato + Botón (sin logo) -->
         <div class="pato-column">
           <img src="images/pato.svg" class="pato-img" alt="Pato UMNG" />
 
-          <!-- Botón Habla conmigo debajo del pato -->
           <button class="mic-btn-pato">
             Habla conmigo
             <img src="icons/microphone.svg" alt="micrófono" class="mic-icon" />
           </button>
         </div>
 
-        <!-- COLUMNA DERECHA: Header + Chat Card -->
         <div class="chat-column">
-          <!-- ENCABEZADO: Título + Subtítulo -->
           <header class="main-header">
             <h1 class="main-title">Habla con Patroclo, tu asistente virtual</h1>
             <p class="main-subtitle">
@@ -54,7 +45,6 @@
           </header>
 
           <div class="chat-card">
-            <!-- Header del chat -->
             <div class="chat-header">
               <div class="chat-header-icon">
                 <img
@@ -71,7 +61,7 @@
             </div>
 
             <div class="sugerencias">
-              <p><strong>Puedes preguntarme sobre:</strong></p>
+              <p>Puedes preguntarme sobre:</p>
               <div class="tags">
                 <button class="tag" onclick="sendQuick('Programas académicos')">
                   <img
