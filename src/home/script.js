@@ -1,4 +1,14 @@
 let hasMessages = false;
+let quickQuestions = {};
+
+fetch('../quick-questions/quick-questions.json')
+  .then((res) => res.json())
+  .then((data) => {
+    quickQuestions = data;
+  })
+  .catch((err) => {
+    console.error('Error loading quick-questions.json:', err);
+  });
 
 document.getElementById('msg').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') send();
@@ -97,7 +107,14 @@ function showTyping(state) {
   document.getElementById('typing').style.display = state ? 'block' : 'none';
 }
 
-function sendQuick(text) {
-  document.getElementById('msg').value = text;
+function sendQuick(tag) {
+  const questions = quickQuestions[tag];
+  if (questions && Array.isArray(questions) && questions.length > 0) {
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    const question = questions[randomIndex];
+    document.getElementById('msg').value = question;
+  } else {
+    document.getElementById('msg').value = tag;
+  }
   send();
 }
