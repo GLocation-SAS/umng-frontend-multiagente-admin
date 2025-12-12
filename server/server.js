@@ -24,7 +24,7 @@ app.use((req, res, next) => {
   res.sendFile(path.join(homePath, 'index.html'));
 });
 
-const PROJECT_ID = 'umng-admin-agentes-dev';
+const PROJECT_ID = 'umng-agentes-dev';
 const LOCATION = 'global';
 const AGENT_ID = '93699bca-c7fb-40ca-bf30-ca394d60c3bc';
 
