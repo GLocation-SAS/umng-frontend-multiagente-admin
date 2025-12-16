@@ -184,7 +184,7 @@ body {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-235px - 12px));
+  transform: translateX(calc(-220px - 12px));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -329,7 +329,7 @@ body {
   line-height: 1.5;
   display: flex;
   align-items: flex-start;
-  gap: 10px;
+  gap: 1px;
   position: relative;
 }
 
@@ -544,7 +544,7 @@ body {
   .chat-header-icon {
     width: 34px;
     height: 34px;
-    transform: translateX(calc(-210px - 10px));
+    transform: translateX(calc(-190px - 10px));
   }
 
   .sugerencias > p {
@@ -659,7 +659,7 @@ body {
   .chat-header-icon {
     width: 60px;
     height: 60px;
-    transform: translateX(calc(-220px - 2px));
+    transform: translateX(calc(-300px - 2px));
   }
 
   .sugerencias {
@@ -697,7 +697,7 @@ body {
 
   .msg {
     font-size: 17px;
-    padding: 24px 18px;
+    padding: 5px 18px;
     margin: 24px 0;
     border-radius: 18px;
   }
@@ -917,7 +917,7 @@ body {
   .chat-header-icon {
     width: 30px;
     height: 30px;
-    transform: translateX(calc(-147px - 15px));
+    transform: translateX(calc(-140px - 15px));
   }
 
   .sugerencias {
