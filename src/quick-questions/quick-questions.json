@@ -1,38 +1,26 @@
 {
-  "Programas académicos": [
-    "¿Qué programas académicos ofrece la Universidad Militar Nueva Granada?",
-    "¿Cuáles son las áreas de estudio disponibles en la UMNG?",
-    "¿Qué carreras puedo estudiar en la universidad?",
-    "Cuéntame sobre los programas académicos disponibles"
+  "Generar Certificado Laboral": [
+    "¿Puedo descargar el certificado laboral?",
+    "Quiero generar un certificado laboral",
+    "Necesito generar un certificado laboral"
   ],
-  "Posgrados": [
-    "¿Cuáles son los programas de posgrado disponibles?",
-    "¿Qué maestrías ofrece la universidad?",
-    "¿Hay programas de doctorado en la UMNG?",
-    "Información sobre especializaciones y posgrados"
+  "FAQ - Retiro Cesantías": [
+    "¿Qué son las cesantías?",
+    "¿Qué requisitos documentales tiene el retiro de cesantías?",
+    "¿Puedo usar las cesantías para educación?",
+    "¿Puedo usar cesantías para educación de mis hijos o cónyuge?"
   ],
-  "Pregrados": [
-    "¿Qué programas de pregrado tiene la universidad?",
-    "¿Cuáles son las carreras de pregrado disponibles?",
-    "Quiero información sobre los programas de pregrado",
-    "¿Qué puedo estudiar como pregrado en la UMNG?"
+
+  "Capacitaciones Educación": [
+    "¿Los formatos de apoyo en educación formal tienen link oficial?",
+    "¿Qué procedimiento se debe seguir para solicitar apoyo en educación formal?",
+    "¿Qué actividades hacen parte del procedimiento de apoyo en educación formal?"
   ],
-  "Becas": [
-    "¿Qué opciones de becas están disponibles?",
-    "¿Cómo puedo solicitar una beca?",
-    "Información sobre apoyo financiero y becas",
-    "¿Qué tipos de becas ofrece la universidad?"
-  ],
-  "Trámites": [
-    "¿Cuáles son los trámites académicos que puedo realizar?",
-    "¿Cómo hago un trámite en la universidad?",
-    "Necesito información sobre trámites universitarios",
-    "¿Qué trámites puedo gestionar en línea?"
-  ],
-  "Aula virtual": [
-    "¿Cómo accedo al aula virtual?",
-    "¿Cuál es el enlace del aula virtual?",
-    "Necesito ayuda con el aula virtual",
-    "¿Cómo ingreso a la plataforma virtual?"
+
+  "Capacitaciones Desarrollo Humano": [
+    "¿Los formatos de la capacitación para el Trabajo y el Desarrollo Humano están en línea?",
+    "¿Cuáles son los pasos del procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?",
+    "¿Qué términos o definiciones establece el procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?",
+    "¿Cuál es el objetivo del procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?"
   ]
 }
