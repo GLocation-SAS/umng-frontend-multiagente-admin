@@ -47,7 +47,7 @@ async function getAccessToken() {
 app.post('/api/chat', async (req, res) => {
   try {
     const text = req.body.text;
-    const sessionId = 'session-' + Date.now();
+    const sessionId = req.body.sessionId || 'session-' + Date.now();
 
     const url =
       `https://dialogflow.googleapis.com/v3/projects/${PROJECT_ID}` +

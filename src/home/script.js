@@ -14,6 +14,9 @@ document.getElementById('msg').addEventListener('keypress', function (e) {
   if (e.key === 'Enter') send();
 });
 
+const sessionId =
+  'session-' + Date.now() + '-' + Math.floor(Math.random() * 100000);
+
 async function send() {
   const text = document.getElementById('msg').value.trim();
   if (!text) return;
@@ -34,7 +37,7 @@ async function send() {
     res = await fetch('/api/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ text }),
+      body: JSON.stringify({ text, sessionId }),
     });
   } catch (err) {
     showTyping(false);
