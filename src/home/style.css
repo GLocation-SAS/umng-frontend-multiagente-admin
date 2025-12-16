@@ -184,7 +184,7 @@ body {
   position: absolute;
   left: 50%;
   top: 0;
-  transform: translateX(calc(-220px - 12px));
+  transform: translateX(calc(-230px - 12px));
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -544,7 +544,7 @@ body {
   .chat-header-icon {
     width: 34px;
     height: 34px;
-    transform: translateX(calc(-190px - 10px));
+    transform: translateX(calc(-200px - 10px));
   }
 
   .sugerencias > p {
