@@ -119,13 +119,13 @@ body {
 }
 
 .pato-img {
-  width: 240px;
-  height: 440px;
+  width: 310px;
+  height: 510px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
 }
 
-.mic-btn-pato {
+/* .mic-btn-pato {
   background: #f54900;
   color: white;
   border: none;
@@ -143,9 +143,9 @@ body {
 }
 
 .mic-btn-pato:hover {
-  background: #0b875b;
+  background: #e04401;
   transform: translateY(-1px);
-}
+} */
 
 .chat-column {
   display: flex;
@@ -162,7 +162,7 @@ body {
   padding: 28px;
   display: flex;
   flex-direction: column;
-  height: 432px;
+  height: 410px;
   width: 100%;
   max-width: none;
   overflow: hidden;
@@ -234,7 +234,7 @@ body {
 }
 
 .sugerencias {
-  margin-top: -17px;
+  margin-top: -50px;
 }
 
 .sugerencias > p {
@@ -513,14 +513,14 @@ body {
 
   .pato-img {
     width: 300px;
-    height: 510px;
+    height: 570px;
   }
 
-  .mic-btn-pato {
+  /*   .mic-btn-pato {
     width: 320px;
     height: 62px;
     font-size: 17px;
-  }
+  } */
 
   .chat-card {
     height: 490px;
@@ -617,15 +617,15 @@ body {
 
   .pato-img {
     width: 450px;
-    height: 580px;
+    height: 650px;
   }
 
-  .mic-btn-pato {
+  /*   .mic-btn-pato {
     width: 450px;
     height: 62px;
     font-size: 22px;
     gap: 15px;
-  }
+  } */
 
   .chat-column {
     max-width: 1300px;
@@ -793,15 +793,15 @@ body {
 
   .pato-img {
     width: 410px;
-    height: 752px;
+    height: 676px;
   }
 
-  .mic-btn-pato {
+  /*   .mic-btn-pato {
     width: 546px;
     height: 90px;
     font-size: 32px;
     gap: 21px;
-  }
+  } */
 
   .chat-column {
     max-width: 1840px;

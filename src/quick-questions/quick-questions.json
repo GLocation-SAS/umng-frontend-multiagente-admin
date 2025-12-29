@@ -1,26 +1,10 @@
 {
-  "Generar Certificado Laboral": [
-    "¿Puedo descargar el certificado laboral?",
-    "Quiero generar un certificado laboral",
-    "Necesito generar un certificado laboral"
+  "¿Qué son las cesantías?": ["¿Qué son las cesantías?"],
+  "¿En qué puedo usar las cesantías?": ["¿En qué puedo usar las cesantías?"],
+  "¿Cuál es el objetivo de la capacitación para apoyo en educación formal?": [
+    "¿Cuál es el objetivo de la capacitación para apoyo en educación formal?"
   ],
-  "FAQ - Retiro Cesantías": [
-    "¿Qué son las cesantías?",
-    "¿Qué requisitos documentales tiene el retiro de cesantías?",
-    "¿Puedo usar las cesantías para educación?",
-    "¿Puedo usar cesantías para educación de mis hijos o cónyuge?"
-  ],
-
-  "Capacitaciones Educación": [
-    "¿Los formatos de apoyo en educación formal tienen link oficial?",
-    "¿Qué procedimiento se debe seguir para solicitar apoyo en educación formal?",
-    "¿Qué actividades hacen parte del procedimiento de apoyo en educación formal?"
-  ],
-
-  "Capacitaciones Desarrollo Humano": [
-    "¿Los formatos de la capacitación para el Trabajo y el Desarrollo Humano están en línea?",
-    "¿Cuáles son los pasos del procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?",
-    "¿Qué términos o definiciones establece el procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?",
-    "¿Cuál es el objetivo del procedimiento de apoyo en capacitación para el Trabajo y el Desarrollo Humano?"
+  "¿Cuál es el alcance de la capacitación en Desarrollo Humano?": [
+    "¿Cuál es el alcance de la capacitación para el Trabajo y el Desarrollo Humano?"
   ]
 }
